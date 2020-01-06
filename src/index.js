@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import MyArticle from './MyArticle'
+import MyEvnet from './MyEvent'
 import * as serviceWorker from './serviceWorker';
 
 const articles = [
@@ -16,10 +16,10 @@ const articles = [
     url: 'https://www.yahoo.co.jp/',
     title: 'yahoo',
     description: 'yahoo Home',
-    isNew: true
+    isNew: false
   }
 ]
-ReactDOM.render(<dl>{articles.map( (article) => <MyArticle {...article} key={article.url} /> )}</dl>, document.getElementById('root'));
+ReactDOM.render(<MyEvnet greet="Hello" />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
